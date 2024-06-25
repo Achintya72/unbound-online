@@ -18,9 +18,9 @@ const positions = [
 ]
 
 const features = [
-  <CollegeFeatures />,
-  <PeopleFeatures />,
-  <JobFeatures />
+  <CollegeFeatures key={0}/>,
+  <PeopleFeatures key={1}/>,
+  <JobFeatures key={2}/>
 ];
 
 export default function Home() {
