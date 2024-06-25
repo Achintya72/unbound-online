@@ -5,6 +5,8 @@ import CollegeFeatures from "./features.colleges";
 import PeopleFeatures from "./features.people";
 import JobFeatures from "./features.jobs";
 import Image from "./myImage";
+import { motion } from "framer-motion";
+import Timer from "./timer";
 
 const colors = [
   "bg-purple-400",
@@ -41,10 +43,9 @@ export default function Home() {
       </section>
       <section id="features" className="relative mt-[100px] bg-white-1000">
         <div className="absolute bg-white-1000 w-full bottom-full z-0" style={{ height: "min(33vw, 500px)" }} />
-        <div className="max-w-[1440px] flex flex-col items-center mx-auto px-[20px]">
+        <div className="max-w-[1440px] flex flex-col items-center mx-auto px-[20px] pb-[40px]">
           <h1 className="font-serif text-6xl text-center text-white-100 mb-[40px]">Features</h1>
-          <div className="flex relative rounded-[12px] overflow-hidden max-w-[500px] w-full p-[8px] bg-white-900">
-            <div className={`*:transition-all transition-all duration-300 absolute ${colors[feature]} ${positions[feature]} w-[33%] z-0 rounded-[8px] top-[8px] bottom-[8px]`} />
+          <motion.div className="flex relative flex-col sm:flex-row rounded-[12px] overflow-hidden max-w-[500px] w-full p-[8px] bg-white-900 mb-[20px]">
             <Tab
               activeImg={"/libraryFilled.png"}
               changeTab={changeFeature}
@@ -52,7 +53,9 @@ export default function Home() {
               inactiveImg={"/libraryOutline.png"}
               index={0}
               name={"Colleges"}
-            />
+            >{feature == 0 && 
+              <motion.div key={0} layoutId="indicator" className={`absolute ${colors[feature]} z-0 inset-0 rounded-[8px]`} />
+            }</Tab>
             <Tab
               activeImg={"/peopleFilled.png"}
               changeTab={changeFeature}
@@ -60,7 +63,11 @@ export default function Home() {
               inactiveImg={"/peopleOutline.png"}
               index={1}
               name={"People"}
-            />
+            >
+              {feature == 1 && 
+              <motion.div key={1} layoutId="indicator" className={`absolute ${colors[feature]} z-0 inset-0 rounded-[8px]`} />
+            }
+            </Tab>
             <Tab
               activeImg={"/briefcaseFilled.png"}
               changeTab={changeFeature}
@@ -68,11 +75,19 @@ export default function Home() {
               inactiveImg={"/briefcaseOutline.png"}
               index={2}
               name={"Internships"}
-            />
-          </div>
+            >
+              {feature == 2 && 
+              <motion.div key={2} layoutId="indicator" className={`absolute ${colors[feature]} z-0 inset-0 rounded-[8px]`} />
+            }
+            </Tab>
+          </motion.div>
           {features[feature]}
         </div>
-
+      </section>
+      <section id="countdown" className="py-[100px] gap-[20px] flex flex-col items-center justify-center max-w-[1440px] mx-auto px-[20px]">
+            <h2 className="text-5xl font-serif">Coming Soon</h2>
+            <p className="font-sans text-white-900">Unbound will soon be available to you on Apple App Store and Google Play Store.</p>
+            <Timer />
       </section>
     </main>
   );

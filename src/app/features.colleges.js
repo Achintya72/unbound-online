@@ -2,7 +2,7 @@ import Feature from "./features.feature"
 
 export default function CollegeFeatures() {
     return (
-        <div className="flex gap-[20px] w-full">
+        <div className="flex flex-col md:flex-row gap-[20px] w-full">
             <Feature 
                 title="Find Colleges"
                 image="/CollegeFeed.png" 
@@ -10,7 +10,7 @@ export default function CollegeFeatures() {
                 description="Browse through our list of recommended colleges, and follow them to receive any and all news regarding them."    
             />
             <Feature 
-                title="Check if it Fits"
+                title="Check if They Fit"
                 image="/CollegeCampus.png" 
                 color="text-purple-300"
                 description="Find statistics about student life, activities, popular majors, acceptance rates, tuition, and more to see if this is the right college for you."    
