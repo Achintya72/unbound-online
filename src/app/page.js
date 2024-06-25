@@ -4,6 +4,7 @@ import Tab from "./tabs/tab";
 import CollegeFeatures from "./features.colleges";
 import PeopleFeatures from "./features.people";
 import JobFeatures from "./features.jobs";
+import Image from "./myImage";
 
 const colors = [
   "bg-purple-400",
@@ -34,9 +35,9 @@ export default function Home() {
         <a className="px-[24px] py-[12px] rounded-[8px] text-white-100 text-sans bg-white-1000 font-medium" style={{ lineHeight: "120%" }}>Learn More</a>
       </section>
       <section id="mockups" className=" relative flex max-w-[1440px] items-start mx-auto z-10 mt-[40px] justify-center gap-[20px] overflow-x-hidden">
-        <img alt="Company Profile Page Mockup" src="/CompanyMockup.png" className="flex-1 min-w-[200px] h-auto" />
-        <img alt="User Profile Page Mockup" src="/UserMockup.png" className="flex-1 mt-[40px] min-w-[200px] h-auto" />
-        <img alt="College Profile Page Mockup" src="/CollegeMockup.png" className="flex-1 min-w-[200px] h-auto" />
+        <Image alt="Company Profile Page Mockup" src="/CompanyMockup.png" className="flex-1 min-w-[200px] h-auto" />
+        <Image alt="User Profile Page Mockup" src="/UserMockup.png" className="flex-1 mt-[40px] min-w-[200px] h-auto" />
+        <Image alt="College Profile Page Mockup" src="/CollegeMockup.png" className="flex-1 min-w-[200px] h-auto" />
       </section>
       <section id="features" className="relative mt-[100px] bg-white-1000">
         <div className="absolute bg-white-1000 w-full bottom-full z-0" style={{ height: "min(33vw, 500px)" }} />
