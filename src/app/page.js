@@ -86,7 +86,7 @@ export default function Home() {
       </section>
       <section id="countdown" className="py-[100px] gap-[20px] flex flex-col items-center justify-center max-w-[1440px] mx-auto px-[20px]">
             <h2 className="text-5xl font-serif">Coming Soon</h2>
-            <p className="font-sans text-white-900">Unbound will soon be available to you on Apple App Store and Google Play Store.</p>
+            <p className="font-sans text-white-900 text-center">Unbound will soon be available to you on Apple App Store and Google Play Store.</p>
             <Timer />
       </section>
     </main>
